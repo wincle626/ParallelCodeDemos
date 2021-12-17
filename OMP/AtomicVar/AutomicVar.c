@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <omp.h>
 
-#define MAX 10
+#define MAX 4
 
 int main(int argc, char** argv) {
 
@@ -11,13 +11,13 @@ int main(int argc, char** argv) {
 	#pragma omp parallel num_threads(MAX)
 	{
 		int tid = omp_get_thread_num();
-        	#pragma omp atomic
+		// #pragma omp atomic
 		sharedmem += tid;
-        	#pragma omp atomic
-        	count++;
+		// #pragma omp atomic
+		count++;
 	}
-        printf("Number of threads: %d\n", count);
-        printf("Sum of thread index is: %d\n", sharedmem);
+	printf("Number of threads: %d\n", count);
+	printf("Sum of thread index is: %d\n", sharedmem);
 	
 	return 0;
 	
