@@ -30,7 +30,7 @@ int main(int argc, char** argv){
 	{
 		for(i=0;i<LEN;i++){
 			for(j=0;j<LOOP;j++){
-				C[i] = C[i] + i;
+				C[i] += C[i] + i;
 			}
 		}
 	}
@@ -44,7 +44,7 @@ int main(int argc, char** argv){
 		#pragma omp for private(i, j)
 		for(i=0;i<LEN;i++){
 			for(j=0;j<LOOP;j++){
-				C[i] = C[i] + i;
+				C[i] += C[i] + i;
 			}
 		}
 	}
@@ -59,7 +59,7 @@ int main(int argc, char** argv){
 		for(i=0;i<LEN;i++){
 			int tmp = C[i];
 			for(j=0;j<LOOP;j++){
-				tmp = tmp + i;
+				tmp += tmp + i;
 			}
 			C[i] = tmp;
 		}
@@ -74,7 +74,7 @@ int main(int argc, char** argv){
 		#pragma omp for private(i, j)
 		for(i=0;i<LEN;i++){
 			for(j=0;j<LOOP;j++){
-				C_PAD[i*PAD] = C_PAD[i*PAD] + i;
+				C_PAD[i*PAD] += C_PAD[i*PAD] + i;
 			}
 		}
 	}
@@ -85,10 +85,10 @@ int main(int argc, char** argv){
 	start = omp_get_wtime();
 	#pragma omp parallel shared(C)
 	{	
-		#pragma omp for private(i, j) schedule(static, 1)
+		#pragma omp for private(i, j) schedule(static, LEN/PAD)
 		for(i=0;i<LEN;i++){
 			for(j=0;j<LOOP;j++){
-				C[i] = C[i] + i;
+				C[i] += C[i] + i;
 			}
 		}
 	}
