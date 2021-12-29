@@ -1,4 +1,5 @@
-#define CL_TARGET_OPENCL_VERSION 120
+// Define the OpenCL version
+#define CL_TARGET_OPENCL_VERSION 200
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,18 +41,19 @@ int main(int argc, char** argv){
 		perror("Unable to find any OpenCL platforms");
 		exit(1);
 	}
-	printf("Number of OpenCL platforms found: %d\n", numOfPlatforms);
+	printf("Number of OpenCL platforms found: %d\n", (int) numOfPlatforms);
 
 
 	// Search for a CPU/GPU device through the installed
    	// platform. Build a OpenCL program and do not run it.
-   	for(cl_uint i = 0; i < numOfPlatforms; i++ ) {
-		printf("On the %dth platform. \n");
+   	for(int i = 0; i < numOfPlatforms; i++ ) {
+		printf("On the %dth platform. \n", i);
 		ProgramQuery(platforms[i], numOfPlatforms);
 	}
 
 	return 0;
 }
+
 void DisplayProgramInfo(cl_program program, cl_program_info param_name){
 	cl_uint err;
 	switch(param_name) {
@@ -172,7 +174,7 @@ void ProgramQuery(cl_platform_id platform, cl_uint numOfPlatforms) {
                		                 CL_DEVICE_TYPE_CPU,
                        		         1, &device, NULL);
 		printf("Found a CPU.\n");
-       	}else{
+	}else{
 		printf("Found a GPU.\n");
 	}
         if(error != CL_SUCCESS) {
@@ -209,6 +211,7 @@ void ProgramQuery(cl_platform_id platform, cl_uint numOfPlatforms) {
 	DisplayProgramInfo(program, CL_PROGRAM_REFERENCE_COUNT);
 	DisplayProgramInfo(program, CL_PROGRAM_NUM_DEVICES);
 	DisplayProgramInfo(program, CL_PROGRAM_NUM_KERNELS);
+	DisplayProgramInfo(program, CL_PROGRAM_KERNEL_NAMES);
 	DisplayProgramInfo(program, CL_PROGRAM_CONTEXT);
 	DisplayProgramInfo(program, CL_PROGRAM_DEVICES);
 

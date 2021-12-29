@@ -1,4 +1,4 @@
-// This program implements a matrix vector multiplication using OpenCL
+// This program implements a matrix dot multiplication using OpenCL
 
 // System includes
 #include <stdio.h>
@@ -29,8 +29,6 @@ int main() {
     
     // Compute the size of the data 
     size_t datasize = sizeof(int)*ROW*COL;
-    size_t rowdatasize = sizeof(int*)*ROW;
-    size_t coldatasize = sizeof(int)*COL;
 
     // Allocate space for input/output data
     A = (int*)malloc(datasize);

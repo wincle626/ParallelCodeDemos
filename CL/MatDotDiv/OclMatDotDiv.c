@@ -1,4 +1,4 @@
-// This program implements a matrix vector multiplication using OpenCL
+// This program implements a matrix dot division using OpenCL
 
 // System includes
 #include <stdio.h>

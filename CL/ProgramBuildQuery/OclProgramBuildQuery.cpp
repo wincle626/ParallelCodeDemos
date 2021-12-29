@@ -1,9 +1,9 @@
+// Define the OpenCL version
 #define CL_TARGET_OPENCL_VERSION 200
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <CL/cl.h>
-
 
 void ProgramBuildQuery(cl_program program, cl_device_id device);
 void loadProgramSource(const char** filename, int filenumber,
@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
 	// Search for a CPU/GPU device through the installed
    	// platform. Build a OpenCL program and do not run it.
    	for(cl_uint i = 0; i < numOfPlatforms; i++ ) {
-		printf("On the %dth platform. \n");
+		printf("On the %dth platform. \n", i);
 		cl_device_id device;
        		// Get the GPU device
 		error = clGetDeviceIDs(platforms[i], 
@@ -142,7 +142,7 @@ void ProgramBuildQuery(cl_program program, cl_device_id device){
 				CL_PROGRAM_BUILD_GLOBAL_VARIABLE_TOTAL_SIZE,
 				sizeof(size_t), &globalvariable_size,
 				NULL);
-		printf("%d bytes are used for global memory \n");
+		printf("%ld bytes are used for global memory \n", globalvariable_size);
 	}
 	
 }
