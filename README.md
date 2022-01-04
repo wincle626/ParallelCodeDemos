@@ -2,7 +2,7 @@
 
 ## Folder structure
 
-###___
+___
 
   |__ CL
   
