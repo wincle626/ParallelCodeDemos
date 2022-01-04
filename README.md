@@ -7,8 +7,11 @@ ___
   |__ CL
   
   |  |__CommandQueueQuery
+  
   |  |__ContextQuery
+  
   |  |__DeviceQuery
+  
   |  |__EuqueueKernel
   |  |__Helloworld
   |  |__KernelQuery
