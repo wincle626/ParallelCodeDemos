@@ -3,15 +3,16 @@
 ## Folder structure
 
 ___
+
   |__ CL
-  |  |__ CommandQueueQuery
-  |  |__ ContextQuery
-  |  |__ DeviceQuery
-  |  |__ EuqueueKernel
-  |  |__ Helloworld
-  |  |__ KernelQuery
-  |  |__ MatDotDiv
-  |  |__ MatDotMul
+  |  |__CommandQueueQuery
+  |  |__ContextQuery
+  |  |__DeviceQuery
+  |  |__EuqueueKernel
+  |  |__Helloworld
+  |  |__KernelQuery
+  |  |__MatDotDiv
+  |  |__MatDotMul
   |  |__MatMul_Native
   |  |__MatMul_NativeVec
   |  |__MatMul_Tiled
