@@ -19,12 +19,12 @@ int main(argc,argv) int argc; char *argv[];
     } else if (rank == 1) {
         dest = 0;
         source = 0;
-        rc = MPI_Recv(&inmsg, 1, MPI_CHAR, source, tag, MPI_COMM_WORLD, &Stat);
         rc = MPI_Send(&outmsg, 1, MPI_CHAR, dest, tag, MPI_COMM_WORLD);
+        rc = MPI_Recv(&inmsg, 1, MPI_CHAR, source, tag, MPI_COMM_WORLD, &Stat);
     }
 
     rc = MPI_Get_count(&Stat, MPI_CHAR, &count);
-    printf("Task %d: Received %d char(s) from task %d with tag %d \n",
+    printf("Process %d: Received %d char(s) from task %d with tag %d \n",
            rank, count, Stat.MPI_SOURCE, Stat.MPI_TAG);
     MPI_Finalize();
 }

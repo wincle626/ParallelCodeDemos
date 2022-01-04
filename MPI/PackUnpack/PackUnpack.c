@@ -41,6 +41,8 @@ int main(int argc, char* argv[])
 	     &position, MPI_COMM_WORLD);
 
     MPI_Send(message, BUFFSIZE, MPI_PACKED, 1, 1, MPI_COMM_WORLD);
+
+    printf("rank %d send:%.1f\t %s\t %d\n", rank, value, name, param);  
   }
   else {
 
@@ -55,7 +57,7 @@ int main(int argc, char* argv[])
     MPI_Unpack(message, BUFFSIZE, &position, &param, 1,
 	       MPI_INT, MPI_COMM_WORLD);
 
-    printf("rank %d:\t%d %.1f %s\n", rank, param, value, name); 
+    printf("rank %d receive:%.1f\t %s\t %d\n", rank, value, name, param); 
   }
 
   MPI_Finalize();
