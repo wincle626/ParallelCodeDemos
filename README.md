@@ -1,10 +1,10 @@
 # This is the repository for the code demo for teaching in parallel and distributed technologies
 
-## Folder structure
+## Directory structure
 
     .
     ├── CL  
-    │   ├── CommandQueueQuery  
+    │   ├── CommandQueueQuery  -  
     │   ├── ContextQuery  
     │   ├── DeviceQuery  
     │   ├── EuqueueKernel
