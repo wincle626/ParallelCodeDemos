@@ -2,9 +2,10 @@
 
 ## Folder structure
 
-___
+###___
 
   |__ CL
+  
   |  |__CommandQueueQuery
   |  |__ContextQuery
   |  |__DeviceQuery
