@@ -97,7 +97,15 @@
     │   ├── VecAdd
     │   └── omp_get_wtime 
     │   
-    ├── slides  
+    ├── slides
+    │   ├── CL_2021.pptx
+    │   ├── MPI_2021.pptx
+    │   └── MPI_2021.pptx 
+    │   
+    ├── macOS
+    │   ├── cl
+    │   ├── mpi
+    │   └── omp 
     │   
     └── README.md
 
