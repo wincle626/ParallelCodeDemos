@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7838278d-46dc-4e2d-9ada-a6995d924072": {
+      "ProjectGuid": "7838278d-46dc-4e2d-9ada-a6995d924072",
+      "DisplayName": "test_mpi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

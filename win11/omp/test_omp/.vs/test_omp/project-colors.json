@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "338d628c-41e9-47b7-9ee7-33cbfd17116a": {
+      "ProjectGuid": "338d628c-41e9-47b7-9ee7-33cbfd17116a",
+      "DisplayName": "test_omp",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
