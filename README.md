@@ -1,4 +1,4 @@
-# This is the repository for the code demo for teaching in parallel and distributed technologies
+# This is the repository for the code demo of parallel and distributed technologies
 
 ## Directory structure
 
