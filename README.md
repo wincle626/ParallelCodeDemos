@@ -3,7 +3,7 @@
 ## Directory structure
 
     .
-    ├── CL  
+    ├── CL 
     │   ├── CommandQueueQuery  -  
     │   ├── ContextQuery  
     │   ├── DeviceQuery  
@@ -64,7 +64,7 @@
     │   ├── VecSum
     │   └── Wtime 
     │   
-    ├── OMP
+    ├── OMP 
     │   ├── AtomicVar
     │   ├── Barrier
     │   ├── BarrierOpt
@@ -97,7 +97,7 @@
     │   ├── VecAdd
     │   └── omp_get_wtime 
     │   
-    ├── macOS
+    ├── macOS (Xcode + clang)
     │   ├── cl
     │   │   ├── printdevices
     │   │   └── test 
@@ -107,12 +107,12 @@
     │       └── test 
     │   
     ├── win11
-    │   ├── cl (visual studio 2019)
+    │   ├── cl (Visual Studio 2019 + Intel OpenCL CPU Runtime)
     │   │   ├── printdevices
     │   │   └── test_ocl 
-    │   ├── mpi (visual studio 2022)
+    │   ├── mpi (Visual Studio 2022 + Microsoft MPI)
     │   │   └── test_mpi 
-    │   └── omp (visual studio 2022)
+    │   └── omp (Visual Studio 2022)
     │       └── test_omp
     │   
     ├── slides
