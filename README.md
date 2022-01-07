@@ -99,8 +99,21 @@
     │   
     ├── macOS
     │   ├── cl
-    │   ├── mpi
+    │   │   ├── printdevices
+    │   │   └── test 
+    │   ├── mpich
+    │   │   └── test 
     │   └── omp 
+    │       └── test 
+    │   
+    ├── win11
+    │   ├── cl (visual studio 2019)
+    │   │   ├── printdevices
+    │   │   └── test_ocl 
+    │   ├── mpi (visual studio 2022)
+    │   │   └── test_mpi 
+    │   └── omp (visual studio 2022)
+    │       └── test_omp
     │   
     ├── slides
     │   ├── CL_2021.pptx
