@@ -119,7 +119,7 @@
     ├── slides
     │   ├── CL_2021.pptx
     │   ├── MPI_2021.pptx
-    │   └── MPI_2021.pptx 
+    │   └── OMP_2021.pptx 
     │   
     └── README.md
 
